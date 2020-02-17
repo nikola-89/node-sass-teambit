@@ -2,5 +2,87 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 14px;
+}
+
+.wrapper {
+  max-width: 1150px;
+  margin: auto;
+}
+
+::-moz-selection {
+  background: #cfd7ef;
+}
+
+::selection {
+  background: #cfd7ef;
+}
+
+@font-face {
+  font-family: "HarmoniaSansProCyrSemiBd";
+  src: url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff") format("woff"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.svg#HarmoniaSansProCyrSemiBd") format("svg");
+}
+
+@font-face {
+  font-family: "HarmoniaSansProCyrRegular";
+  src: url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff") format("woff"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.svg#HarmoniaSansProCyrRegular") format("svg");
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.navbar:after {
+  content: "";
+  border-bottom: 1px solid #bdb5af;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  display: inline;
+  margin-left: 30px;
+}
+
+.list li a {
+  text-decoration: none;
+  font-family: HarmoniaSansProCyrSemiBd, Arial, sans-serif;
+  color: #58402c;
+}
+
+.list li a img {
+  display: inline;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.list li:last-of-type a {
+  display: inline-block;
+  border: 1px solid #30488f;
+  background: #fff;
+  border-radius: 7px;
+  padding: 6px 10px;
+  color: #30488f;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.list li:last-of-type a:hover {
+  background-color: #30488f;
+  color: #FFF;
 }
 

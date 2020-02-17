@@ -1,0 +1,7 @@
+@mixin btn {
+    display: inline-block;
+    border: 1px solid $globalBlueColor;
+    background: #fff;
+    border-radius: 7px;
+    padding: 6px 10px;
+}
