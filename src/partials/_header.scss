@@ -57,6 +57,7 @@
     }
     &-left {
         float: left;
+        line-height: 1.5;
         max-width: 518px;
         &-title h1 {
             font-family: $defaultFontBold;
