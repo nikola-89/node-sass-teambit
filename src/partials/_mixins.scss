@@ -5,3 +5,23 @@
     border-radius: 7px;
     padding: 6px 10px;
 }
+
+@mixin btnMain {
+    color: #fff;
+    background: $globalBlueColor;
+    padding: 6px 20px;
+}
+
+@mixin btnLogoImg {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@mixin clearfix {
+    content: '';
+    display: table;
+    clear: both;
+}

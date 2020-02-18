@@ -1,3 +1,5 @@
+// **********************************************
+// navbar
 .navbar {
     width: 100%;
     height: 75px;
@@ -14,34 +16,118 @@
         left: 0;
         width: 100%;
     }
-}
-
-.list {
-    list-style: none;
-    li {
-        display: inline;
-        margin-left: 30px;
-        a {
-            text-decoration: none;
-            font-family: HarmoniaSansProCyrSemiBd, Arial, sans-serif;
-            color: $globalTextColor;
-            img {
-                display: inline;
-                width: 18px;
-                height: 18px;
-                margin-right: 5px;
-                vertical-align: middle;
+    .list {
+        list-style: none;
+        li {
+            display: inline;
+            margin-left: 30px;
+            a {
+                text-decoration: none;
+                font-family: $defaultFontBold;
+                color: $globalTextColor;
+                img {
+                    @include btnLogoImg;
+                    &:hover {
+                        fill: #fff
+                    }
+                }
+            }
+            &:last-of-type a {
+                @include btn;
+                color: $globalBlueColor;
+                transition-duration: .2s;
+                transition-timing-function: ease-in;
+                &:hover {
+                    background-color: $globalBlueColor;
+                    color: #FFF;
+                }
+            }
+            &:hover a {
+                color: $globalBlueColor;
             }
         }
-        &:last-of-type a {
-            @include btn;
-            color: $globalBlueColor;
-            transition-duration: .2s;
-            transition-timing-function: ease-in;
-            &:hover {
-                background-color: $globalBlueColor;
-                color: #FFF;
+    }
+}
+// **********************************************
+// hero
+.hero {
+    margin: 100px 0;
+    &:after {
+        @include clearfix;
+    }
+    &-left {
+        float: left;
+        max-width: 518px;
+        &-title h1 {
+            font-family: $defaultFontBold;
+            font-size: 50px;
+            color: $globalTextColor;
+            margin-bottom: 30px;
+        }
+        &-title p {
+            font-family: $defaultFontRegular;
+            font-size: 22px;
+            color: $globalTextColor;
+            margin-bottom: 40px;
+        }
+        &-login {
+            margin-bottom: 20px;
+            a:first-of-type {
+                @include btn;
+                @include btnMain;
+                font-family: $defaultFontRegular;
+                text-decoration: none;
+                img {
+                    @include btnLogoImg;
+                }
             }
+            span {
+                display: inline-block;
+                height: 35px;
+                width: 38px;
+                line-height: 35px;
+                color: #bdb5af;
+                text-align: center;
+                font-family: $defaultFontRegular;
+            }
+            a:last-of-type {
+                @include btn;
+                @include btnMain;
+                font-family: $defaultFontRegular;
+                text-decoration: none;
+                img {
+                    @include btnLogoImg;
+                }
+            }
+            a {
+                transition-duration: .2s;
+                transition-timing-function: ease-in;
+            }
+            a:hover {
+                background-color: #26337d
+            }
+        }
+        &-login-extra a {
+            color: $globalTextColor;
+            text-decoration: none;
+            font-family: $defaultFontRegular;
+            &:hover {
+                color: $globalBlueColor;
+            }
+            img {
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+                color: $globalTextColor;
+            }
+        }
+    }
+    &-right {
+        float: right;
+        margin-bottom: 36px;
+        img {
+            max-width: 570px;
+            margin-bottom: 70px;
         }
     }
 }
