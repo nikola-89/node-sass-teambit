@@ -1,0 +1,52 @@
+@media screen and (max-width: $mediaL) {
+    .hero {
+        &-left {
+            float: none;
+            line-height: 1.4;
+            margin: 0 auto;
+            max-width: 750px;
+            text-align: center;
+        }
+        &-right {
+            margin-top: 20px;
+            float: none;
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mediaM) {
+    .navbar {
+        .hamburger {
+            display: block;
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                color: $globalTextColor;
+            }
+        }
+        .list {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $mediaS) {
+    .hero {
+        &-left-login {
+            a {
+                width: 100%;
+            }
+        }
+        &-right {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

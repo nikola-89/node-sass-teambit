@@ -1,23 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.wrapper {
-  max-width: 1150px;
-  margin: auto;
-}
-
-::-moz-selection {
-  background: #cfd7ef;
-}
-
-::selection {
-  background: #cfd7ef;
-}
-
 @font-face {
   font-family: "HarmoniaSansProCyrSemiBd";
   src: url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff") format("woff"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.svg#HarmoniaSansProCyrSemiBd") format("svg");
@@ -26,6 +6,32 @@
 @font-face {
   font-family: "HarmoniaSansProCyrRegular";
   src: url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff") format("woff"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.svg#HarmoniaSansProCyrRegular") format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+::-moz-selection {
+  background: #cfd7ef;
+}
+
+::selection {
+  background: #cfd7ef;
 }
 
 .navbar {
@@ -45,6 +51,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.navbar .hamburger {
+  display: none;
 }
 
 .navbar .list {
@@ -70,10 +80,6 @@
   vertical-align: middle;
 }
 
-.navbar .list li a img:hover {
-  fill: #fff;
-}
-
 .navbar .list li:last-of-type a {
   display: inline-block;
   border: 1px solid #30488f;
@@ -85,9 +91,17 @@
   transition-timing-function: ease-in;
 }
 
+.navbar .list li:last-of-type a svg {
+  vertical-align: middle;
+}
+
 .navbar .list li:last-of-type a:hover {
   background-color: #30488f;
   color: #FFF;
+}
+
+.navbar .list li:last-of-type a:hover .logo-color {
+  display: none;
 }
 
 .navbar .list li:hover a {
@@ -118,7 +132,6 @@
 }
 
 .hero-left-title p {
-  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
   font-size: 22px;
   color: #58402c;
   margin-bottom: 40px;
@@ -137,8 +150,6 @@
   color: #fff;
   background: #30488f;
   padding: 6px 20px;
-  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
-  text-decoration: none;
 }
 
 .hero-left-login a:first-of-type img {
@@ -156,7 +167,6 @@
   line-height: 35px;
   color: #bdb5af;
   text-align: center;
-  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
 }
 
 .hero-left-login a:last-of-type {
@@ -168,8 +178,6 @@
   color: #fff;
   background: #30488f;
   padding: 6px 20px;
-  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
-  text-decoration: none;
 }
 
 .hero-left-login a:last-of-type img {
@@ -191,8 +199,6 @@
 
 .hero-left-login-extra a {
   color: #58402c;
-  text-decoration: none;
-  font-family: HarmoniaSansProCyrRegular, Arial, sans-serif;
 }
 
 .hero-left-login-extra a:hover {
@@ -214,5 +220,54 @@
 .hero-right img {
   max-width: 570px;
   margin-bottom: 70px;
+}
+
+@media screen and (max-width: 1037px) {
+  .hero-left {
+    float: none;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 750px;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 20px;
+    float: none;
+  }
+
+  .hero-right img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .hamburger {
+    display: block;
+  }
+
+  .navbar .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .navbar .hamburger i {
+    color: #58402c;
+  }
+
+  .navbar .list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .hero-left-login a {
+    width: 100%;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+  }
 }
 

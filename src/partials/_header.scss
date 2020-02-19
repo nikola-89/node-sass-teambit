@@ -16,6 +16,9 @@
         left: 0;
         width: 100%;
     }
+    .hamburger {
+        display: none;
+    }
     .list {
         list-style: none;
         li {
@@ -27,9 +30,6 @@
                 color: $globalTextColor;
                 img {
                     @include btnLogoImg;
-                    &:hover {
-                        fill: #fff
-                    }
                 }
             }
             &:last-of-type a {
@@ -37,9 +37,15 @@
                 color: $globalBlueColor;
                 transition-duration: .2s;
                 transition-timing-function: ease-in;
+                svg {
+                    vertical-align: middle;
+                }
                 &:hover {
                     background-color: $globalBlueColor;
                     color: #FFF;
+                    .logo-color {
+                        display: none;
+                    }
                 }
             }
             &:hover a {
@@ -66,7 +72,6 @@
             margin-bottom: 30px;
         }
         &-title p {
-            font-family: $defaultFontRegular;
             font-size: 22px;
             color: $globalTextColor;
             margin-bottom: 40px;
@@ -76,8 +81,6 @@
             a:first-of-type {
                 @include btn;
                 @include btnMain;
-                font-family: $defaultFontRegular;
-                text-decoration: none;
                 img {
                     @include btnLogoImg;
                 }
@@ -89,13 +92,10 @@
                 line-height: 35px;
                 color: #bdb5af;
                 text-align: center;
-                font-family: $defaultFontRegular;
             }
             a:last-of-type {
                 @include btn;
                 @include btnMain;
-                font-family: $defaultFontRegular;
-                text-decoration: none;
                 img {
                     @include btnLogoImg;
                 }
@@ -110,8 +110,6 @@
         }
         &-login-extra a {
             color: $globalTextColor;
-            text-decoration: none;
-            font-family: $defaultFontRegular;
             &:hover {
                 color: $globalBlueColor;
             }

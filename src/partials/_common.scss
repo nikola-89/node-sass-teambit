@@ -3,30 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
+    font-family: $defaultFontRegular;
+}
+
+a {
+    text-decoration: none;
 }
 
 .wrapper {
     max-width: 1150px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
 ::selection {
     background: #cfd7ef;
 }
-
-@font-face {font-family: "HarmoniaSansProCyrSemiBd";
-    src: url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot"),
-    url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.eot?#iefix") format("embedded-opentype"),
-    url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff2") format("woff2"),
-    url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.woff") format("woff"),
-    url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/7ddfe9170a0276b7bde2214f321aed65.svg#HarmoniaSansProCyrSemiBd") format("svg");
-}
-
-@font-face {font-family: "HarmoniaSansProCyrRegular";
-    src: url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot"),
-    url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.eot?#iefix") format("embedded-opentype"),
-    url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff2") format("woff2"),
-    url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.woff") format("woff"),
-    url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/32eb6c28879dcfcaf97b75a5194441e9.svg#HarmoniaSansProCyrRegular") format("svg"); }
