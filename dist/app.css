@@ -244,7 +244,20 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
+
+  .navbar {
+    height: 55px;
+  }
+
+  .navbar .logo {
+    padding-left: 25px;
+  }
+
   .navbar .hamburger {
+    padding-right: 25px;
     display: block;
   }
 
@@ -252,16 +265,25 @@ a {
     cursor: pointer;
   }
 
-  .navbar .hamburger i {
-    color: #58402c;
+  .navbar .hamburger img {
+    width: 26px;
+    height: 26px;
   }
 
   .navbar .list {
     display: none;
   }
+
+  .hero {
+    padding: 0 25px;
+  }
 }
 
 @media screen and (max-width: 485px) {
+  .hero-left {
+    line-height: 1.2;
+  }
+
   .hero-left-login a {
     width: 100%;
   }

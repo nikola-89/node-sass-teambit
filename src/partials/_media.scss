@@ -20,24 +20,39 @@
 }
 
 @media screen and (max-width: $mediaM) {
+    .wrapper {
+        padding: 0;
+    }
     .navbar {
+        height: 55px;
+        .logo {
+            padding-left: 25px;
+        }
         .hamburger {
+            padding-right: 25px;
             display: block;
             &:hover {
                 cursor: pointer;
             }
-            i {
-                color: $globalTextColor;
+            img {
+                width: 26px;
+                height: 26px;
             }
         }
         .list {
             display: none;
         }
     }
+    .hero {
+        padding: 0 25px;
+    }
 }
 
 @media screen and (max-width: $mediaS) {
     .hero {
+        &-left {
+            line-height: 1.2;
+        }
         &-left-login {
             a {
                 width: 100%;
